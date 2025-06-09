@@ -1,0 +1,105 @@
+התחלת הורדה: Mon Jun  9 10:50:01 PM IDT 2025
+מוריד: https://www.cisco.com/c/dam/assets/support/product-images/series/switches-catalyst-3750-series-switches.jpg
+--2025-06-09 22:50:01--  https://www.cisco.com/c/dam/assets/support/product-images/series/switches-catalyst-3750-series-switches.jpg
+Resolving www.cisco.com (www.cisco.com)... 23.48.109.15, 2001:40a8:4400:292::b33, 2001:40a8:4400:285::b33
+Connecting to www.cisco.com (www.cisco.com)|23.48.109.15|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+
+    The file is already fully retrieved; nothing to do.
+
+✓ הצלחה
+------------------------------
+מוריד: https://www.secureitstore.co.il/images/Catalyst-1000-Series/8-port.jpg
+--2025-06-09 22:50:01--  https://www.secureitstore.co.il/images/Catalyst-1000-Series/8-port.jpg
+Resolving www.secureitstore.co.il (www.secureitstore.co.il)... 104.21.16.1, 104.21.112.1, 104.21.48.1, ...
+Connecting to www.secureitstore.co.il (www.secureitstore.co.il)|104.21.16.1|:443... connected.
+HTTP request sent, awaiting response... 416 Range Not Satisfiable
+
+    The file is already fully retrieved; nothing to do.
+
+✓ הצלחה
+------------------------------
+מוריד: https://www.vipsystems.co.il/images/itempics/C9300-48U-A_311020220919561.jpg
+--2025-06-09 22:50:07--  https://www.vipsystems.co.il/images/itempics/C9300-48U-A_311020220919561.jpg
+Resolving www.vipsystems.co.il (www.vipsystems.co.il)... 91.198.70.50
+Connecting to www.vipsystems.co.il (www.vipsystems.co.il)|91.198.70.50|:443... connected.
+HTTP request sent, awaiting response... 429 Too Many Requests
+2025-06-09 22:50:07 ERROR 429: Too Many Requests.
+
+✗ כשלון
+------------------------------
+מוריד: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ54RQHRXJGe8asoe0PHHCECY8WAkLTM17vw&s.png
+--2025-06-09 22:50:07--  https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ54RQHRXJGe8asoe0PHHCECY8WAkLTM17vw&s.png
+Resolving encrypted-tbn0.gstatic.com (encrypted-tbn0.gstatic.com)... 142.250.75.142, 2a00:1450:4028:806::200e
+Connecting to encrypted-tbn0.gstatic.com (encrypted-tbn0.gstatic.com)|142.250.75.142|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 6930 (6.8K) [image/jpeg]
+Saving to: ‘/home/kali/Desktop/scheduled-downloader/downloads/images?q=tbn:ANd9GcSZ54RQHRXJGe8asoe0PHHCECY8WAkLTM17vw&s.png’
+
+     0K ......                                                100% 30.2M=0s
+
+2025-06-09 22:50:07 (30.2 MB/s) - ‘/home/kali/Desktop/scheduled-downloader/downloads/images?q=tbn:ANd9GcSZ54RQHRXJGe8asoe0PHHCECY8WAkLTM17vw&s.png’ saved [6930/6930]
+
+✓ הצלחה
+------------------------------
+מוריד: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ7_C-9WFK7RLh4TEbHpmnLP6MrJ86jEILFw&s.png
+--2025-06-09 22:50:07--  https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ7_C-9WFK7RLh4TEbHpmnLP6MrJ86jEILFw&s.png
+Resolving encrypted-tbn0.gstatic.com (encrypted-tbn0.gstatic.com)... 142.250.75.110, 2a00:1450:4028:800::200e
+Connecting to encrypted-tbn0.gstatic.com (encrypted-tbn0.gstatic.com)|142.250.75.110|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2474 (2.4K) [image/jpeg]
+Saving to: ‘/home/kali/Desktop/scheduled-downloader/downloads/images?q=tbn:ANd9GcQJ7_C-9WFK7RLh4TEbHpmnLP6MrJ86jEILFw&s.png’
+
+     0K ..                                                    100% 24.6M=0s
+
+2025-06-09 22:50:07 (24.6 MB/s) - ‘/home/kali/Desktop/scheduled-downloader/downloads/images?q=tbn:ANd9GcQJ7_C-9WFK7RLh4TEbHpmnLP6MrJ86jEILFw&s.png’ saved [2474/2474]
+
+✓ הצלחה
+------------------------------
+מוריד: https://fishbone.com.my/image/fishbone/image/cache/data/all_product_images/product-184/2wkJ5bFA1694508290-1280x1280.jpg
+--2025-06-09 22:50:07--  https://fishbone.com.my/image/fishbone/image/cache/data/all_product_images/product-184/2wkJ5bFA1694508290-1280x1280.jpg
+Resolving fishbone.com.my (fishbone.com.my)... 103.27.72.14
+Connecting to fishbone.com.my (fishbone.com.my)|103.27.72.14|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 92098 (90K) [image/jpeg]
+Saving to: ‘/home/kali/Desktop/scheduled-downloader/downloads/2wkJ5bFA1694508290-1280x1280.jpg’
+
+     0K .......... .......... .......... .......... .......... 55%  112K 0s
+    50K .......... .......... .......... .........            100% 58.3M=0.4s
+
+2025-06-09 22:50:14 (201 KB/s) - ‘/home/kali/Desktop/scheduled-downloader/downloads/2wkJ5bFA1694508290-1280x1280.jpg’ saved [92098/92098]
+
+✓ הצלחה
+------------------------------
+מוריד: https://madison.tech/wp-content/uploads/2024/03/IE-4010.png
+--2025-06-09 22:50:14--  https://madison.tech/wp-content/uploads/2024/03/IE-4010.png
+Resolving madison.tech (madison.tech)... 35.213.237.130
+Connecting to madison.tech (madison.tech)|35.213.237.130|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 32529 (32K) [image/png]
+Saving to: ‘/home/kali/Desktop/scheduled-downloader/downloads/IE-4010.png’
+
+     0K .......... .......... .......... .                    100% 83.7M=0s
+
+2025-06-09 22:50:21 (83.7 MB/s) - ‘/home/kali/Desktop/scheduled-downloader/downloads/IE-4010.png’ saved [32529/32529]
+
+✓ הצלחה
+------------------------------
+מוריד: https://www.satsigma.co.il/wp-content/uploads/2021/06/cisco-SG220-50-K9-EU.png
+--2025-06-09 22:50:21--  https://www.satsigma.co.il/wp-content/uploads/2021/06/cisco-SG220-50-K9-EU.png
+Resolving www.satsigma.co.il (www.satsigma.co.il)... 185.56.72.170
+Connecting to www.satsigma.co.il (www.satsigma.co.il)|185.56.72.170|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 165566 (162K) [image/png]
+Saving to: ‘/home/kali/Desktop/scheduled-downloader/downloads/cisco-SG220-50-K9-EU.png’
+
+     0K .......... .......... .......... .......... .......... 30% 3.09M 0s
+    50K .......... .......... .......... .......... .......... 61% 6.74M 0s
+   100K .......... .......... .......... .......... .......... 92%  181M 0s
+   150K .......... .                                          100%  137M=0.02s
+
+2025-06-09 22:50:21 (6.75 MB/s) - ‘/home/kali/Desktop/scheduled-downloader/downloads/cisco-SG220-50-K9-EU.png’ saved [165566/165566]
+
+✓ הצלחה
+------------------------------
+סיום: Mon Jun  9 10:50:21 PM IDT 2025
