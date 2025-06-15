@@ -1,79 +1,50 @@
 
-Scheduled Downloader – Bash Script
-Overview
+# Scheduled Downloader Script
 
-This repository contains a simple Bash script for automated downloading of files from a list of URLs. The script is designed to be used as-is without any need for external installations, and it can be run manually or scheduled via cron.
+A Bash script to automate downloading multiple files from a list of URLs, with logging, error handling, and file size reporting.
 
-Features
- 	Downloads files from a text list of URLs (urls.txt)  
- 	Skips empty lines and comments  
- 	Saves all downloaded files in a /downloads folder  
- 	Generates a detailed log for each run in the /logs folder  
- 	Supports scheduled execution using cron  
- 	Minimal dependencies (works out-of-the-box on most Linux distributions)
+## 📁 Features
 
-Project Structure
-scheduled-downloader/
-├── download.sh ← Main Bash script
-├── urls.txt ← Text file with list of URLs
-├── logs/ ← Auto-generated logs with timestamp
-├── downloads/ ← Folder where downloaded files are saved
-└── README.md ← This documentation file
+- Reads URLs from a `urls.txt` file (ignores empty lines and comments)
+- Logs each download attempt with timestamp and result
+- Shows success or failure for each URL
+- Records the size of each successfully downloaded file
+- Creates required folders automatically (`downloads/` and `logs/`)
+- Suitable for manual use or scheduled via `cron`
 
-Requirements
- 	Bash (included in most Linux systems)
- 	wget
- 	cron (for scheduled runs – optional)
+## 🚀 How to Use
 
-No additional packages or setup required.
+1. Clone the repository or copy the script to your desired folder:
+    ```bash
+    git clone https://github.com/your-username/scheduled-downloader.git
+    cd scheduled-downloader
+    ```
 
-How to Use
-1. Clone the repository or download the script:
-git clone https://github.com/YOUR_USERNAME/scheduled-downloader.git
-cd scheduled-downloader
-2. Add URLs to the file urls.txt (one per line):
-Cisco product images
-https://example.com/cisco1.jpg
-https://example.com/cisco2.iso
+2. Add your URLs to the file `urls.txt`. One URL per line. You can add comments using `#` and leave empty lines.
 
-3. Make the script executable:
-chmod +x download.sh
+3. Make sure the script is executable:
+    ```bash
+    chmod +x downloader.sh
+    ```
 
-4. Run the script manually:
-./download.sh
+4. Run the script:
+    ```bash
+    ./downloader.sh
+    ```
 
-5. Check results:
-Files will appear in the downloads/ folder
-Logs will be saved in the logs/ folder with timestamp in filename
+## 📝 Log Output Example
 
-6. Schedule with cron (optional)
-To run the script automatically every day at 15:00:
-crontab -e
-Then add:
-* * *  15 00 full/path/to/download.sh >> /full/path/to/logs/cron.log 2>&1
-Replace /full/path/to/ with the actual path to your script.
-
-Possible Extensions
-Email notifications upon success/failure
-GUI menu with dialog or zenity
-Delete old downloads automatically
-Support for FTP/SFTP/rsync
-
-License
-MIT License – Feel free to use, modify and share.
-
-Author
-Created by Alex
-GitHub: https://github.com/sashko770
-
-
-
-
-
-
-
-
-
-
-
-
+```text
+Start Download: 2025-06-16 14:00
+==============================
+Download: https://example.com/file1.zip
+✓ Success – Size: 12M
+------------------------------
+Download: https://invalid-url.com/file2.zip
+✗ Failure
+------------------------------
+Download: https://example.com/file3.mp4
+✓ Success – Size: 95M
+------------------------------
+ההורדה הסתיימה.
+==============================
