@@ -1,4 +1,3 @@
-yoelc@yoelc-ubuntu:~/scheduled-downloader$ cat > downloader.sh << 'EOF'
 #!/bin/bash
 # מעבר לתיקיית הסקריפט
 cd /home/yoelc/Desktop/scheduled-downloader || exit 1
@@ -31,7 +30,14 @@ grep -v '^#' "$URLS_FILE" | grep -v '^$' | while read -r url; do
 
     # ניסיון הורדה עם שמירת הפלט ללוג
     if wget -c "$url" -P "$DOWNLOAD_DIR" >> "$LOG_FILE" 2>&1; then
-        echo "✓ Success" >> "$LOG_FILE"
+        FILE_NAME=$(basename "$url")
+        FILE_PATH="$DOWNLOAD_DIR/$FILE_NAME"
+        if [ -f "$FILE_PATH" ]; then
+            FILE_SIZE=$(du -h "$FILE_PATH" | cut -f1)
+            echo "✓ Success – Size: $FILE_SIZE" >> "$LOG_FILE"
+        else
+            echo "✓ Success – Size: unknown" >> "$LOG_FILE"
+        fi
     else
         echo "✗ Failure" >> "$LOG_FILE"
     fi
@@ -42,4 +48,3 @@ done
 echo "סיום: $(date)" >> "$LOG_FILE"
 echo "==============================" >> "$LOG_FILE"
 echo "ההורדה הסתיימה." >> "$LOG_FILE"
-EOF
