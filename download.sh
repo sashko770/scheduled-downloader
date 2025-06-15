@@ -1,30 +1,45 @@
-
-
+yoelc@yoelc-ubuntu:~/scheduled-downloader$ cat > downloader.sh << 'EOF'
 #!/bin/bash
-cd /home/kali/Desktop/scheduled-downloader
-env >> /home/kali/Desktop/scheduled-downloader/logs/cron-env.txt
+# מעבר לתיקיית הסקריפט
+cd /home/yoelc/Desktop/scheduled-downloader || exit 1
 
-# תיקיות
-DOWNLOAD_DIR="/home/kali/Desktop/scheduled-downloader/downloads"
-LOG_FILE="/home/kali/Desktop/scheduled-downloader/logs/download_$(date +'%Y-%m-%d_%H-%M-%S').log"
+# ייצוא משתני סביבה לקובץ לוג (לבדיקת בעיות עם cron)
+env >> logs/cron-env.txt
 
-# בדיקת קיום תיקיות
-mkdir -p "$DOWNLOAD_DIR" "$(dirname "$LOG_FILE")"
+# הגדרות נתיבים
+DOWNLOAD_DIR="/home/yoelc/Desktop/scheduled-downloader/downloads"
+LOG_DIR="/home/yoelc/Desktop/scheduled-downloader/logs"
+LOG_FILE="$LOG_DIR/download_$(date +'%Y-%m-%d_%H-%M-%S').log"
+URLS_FILE="/home/yoelc/Desktop/scheduled-downloader/urls.txt"
 
-echo "התחלת הורדה: $(date)" >> "$LOG_FILE"
+# יצירת תיקיות במידת הצורך
+mkdir -p "$DOWNLOAD_DIR" "$LOG_DIR"
 
-# קריאה מהקובץ urls.txt, התעלמות מהערות או שורות ריקות
-grep -v '^#' /home/kali/Desktop/scheduled-downloader/urls.txt | grep -v '^$' | while read -r url; do
-    echo "מוריד: $url" >> "$LOG_FILE"
-    
-    # נסה להוריד
+# בדיקת קיום קובץ urls.txt
+if [ ! -f "$URLS_FILE" ]; then
+    echo "Error: $URLS_FILE not found" >> "$LOG_FILE"
+    exit 1
+fi
+
+# התחלה
+echo "Start Download: $(date)" >> "$LOG_FILE"
+echo "==============================" >> "$LOG_FILE"
+
+# קריאת כתובות מהקובץ תוך התעלמות משורות ריקות או הערות
+grep -v '^#' "$URLS_FILE" | grep -v '^$' | while read -r url; do
+    echo "Download: $url" >> "$LOG_FILE"
+
+    # ניסיון הורדה עם שמירת הפלט ללוג
     if wget -c "$url" -P "$DOWNLOAD_DIR" >> "$LOG_FILE" 2>&1; then
-        echo "✓ הצלחה" >> "$LOG_FILE"
+        echo "✓ Success" >> "$LOG_FILE"
     else
-        echo "✗ כשלון" >> "$LOG_FILE"
+        echo "✗ Failure" >> "$LOG_FILE"
     fi
-
     echo "------------------------------" >> "$LOG_FILE"
 done
 
+# סיום
 echo "סיום: $(date)" >> "$LOG_FILE"
+echo "==============================" >> "$LOG_FILE"
+echo "ההורדה הסתיימה." >> "$LOG_FILE"
+EOF
