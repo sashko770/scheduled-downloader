@@ -14,9 +14,10 @@ URLS_FILE="/home/yoelc/Desktop/scheduled-downloader/urls.txt"
 # יצירת תיקיות במידת הצורך
 mkdir -p "$DOWNLOAD_DIR" "$LOG_DIR"
 
+
 # בדיקת קיום קובץ urls.txt
 if [ ! -f "$URLS_FILE" ]; then
-    echo "Error: $URLS_FILE not found" >> "$LOG_FILE"
+    echo "Error:. $URLS_FILE not found" >> "$LOG_FILE"
     exit 1
 fi
 
@@ -48,3 +49,4 @@ done
 echo "סיום: $(date)" >> "$LOG_FILE"
 echo "==============================" >> "$LOG_FILE"
 echo "ההורדה הסתיימה." >> "$LOG_FILE"
+
